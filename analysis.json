@@ -1,0 +1,1687 @@
+{
+  "errors": [],
+  "warnings": [
+    "(undefined) configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/",
+    "(undefined) configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+  ],
+  "version": "4.43.0",
+  "hash": "9aadf6daf713d4e134a5e5129954ec0a449455ad",
+  "children": [
+    {
+      "errors": [],
+      "warnings": [
+        "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+      ],
+      "hash": "9aadf6daf713d4e134a5",
+      "time": 2432,
+      "builtAt": 1590539226377,
+      "publicPath": "",
+      "outputPath": "/Users/aidanblumlevine/Desktop/NodeTS/dist",
+      "assetsByChunkName": {
+        "main": "bundle.js"
+      },
+      "assets": [
+        {
+          "name": "bundle.js",
+          "size": 1458,
+          "chunks": [
+            0
+          ],
+          "chunkNames": [
+            "main"
+          ],
+          "info": {},
+          "emitted": true
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "main": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "bundle.js"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "main": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "bundle.js"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 1050,
+          "names": [
+            "main"
+          ],
+          "files": [
+            "bundle.js"
+          ],
+          "hash": "63a87299479ff9c189bf",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": 0,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts eca2504d66d8debe27b2f463b65a8427",
+              "name": "./src/client/client.ts + 1 modules",
+              "index": 0,
+              "index2": 1,
+              "size": 1050,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "./src/client/client.ts",
+                  "loc": "main"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": [],
+              "optimizationBailout": [],
+              "depth": 0,
+              "modules": [
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "name": "./src/client/client.ts",
+                  "index": 0,
+                  "index2": 1,
+                  "size": 808,
+                  "cacheable": true,
+                  "built": true,
+                  "optional": false,
+                  "prefetched": false,
+                  "chunks": [],
+                  "issuer": null,
+                  "issuerId": null,
+                  "issuerName": null,
+                  "issuerPath": null,
+                  "failed": false,
+                  "errors": 0,
+                  "warnings": 0,
+                  "assets": [],
+                  "reasons": [
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": null,
+                      "module": null,
+                      "moduleName": null,
+                      "type": "single entry",
+                      "userRequest": "./src/client/client.ts",
+                      "loc": "main"
+                    }
+                  ],
+                  "usedExports": true,
+                  "providedExports": [],
+                  "optimizationBailout": [
+                    "ModuleConcatenation bailout: Module is an entry point"
+                  ],
+                  "depth": 0,
+                  "source": "import Constants from '../shared/constants';\nvar Client = /** @class */ (function () {\n    function Client() {\n        this.inputs = { up: false, down: false, left: false, right: false, actionID: 0 };\n        this.socket = io();\n        this.socket.emit(Constants.SOCKET.JOIN);\n        this.socket.on(Constants.SOCKET.STATE, function (state) {\n            this.loadState(state);\n        });\n        var canvas = document.getElementById('canvas');\n        canvas.width = window.innerWidth;\n        canvas.height = window.innerHeight;\n        this.ctx = canvas.getContext('2d');\n        this.entities = [];\n    }\n    Client.prototype.loadState = function (state) {\n    };\n    Client.prototype.emit = function () {\n        this.socket.emit(Constants.SOCKET.INPUTS, this.inputs);\n    };\n    return Client;\n}());\n"
+                },
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/shared/constants.ts",
+                  "name": "./src/shared/constants.ts",
+                  "index": 1,
+                  "index2": 0,
+                  "size": 242,
+                  "cacheable": true,
+                  "built": true,
+                  "optional": false,
+                  "prefetched": false,
+                  "chunks": [],
+                  "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "issuerId": null,
+                  "issuerName": "./src/client/client.ts",
+                  "issuerPath": [
+                    {
+                      "id": null,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                      "name": "./src/client/client.ts"
+                    }
+                  ],
+                  "failed": false,
+                  "errors": 0,
+                  "warnings": 0,
+                  "assets": [],
+                  "reasons": [
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                      "module": "./src/client/client.ts",
+                      "moduleName": "./src/client/client.ts",
+                      "type": "harmony side effect evaluation",
+                      "userRequest": "../shared/constants",
+                      "loc": "1:0-44"
+                    },
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                      "module": "./src/client/client.ts",
+                      "moduleName": "./src/client/client.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "../shared/constants",
+                      "loc": "6:25-34"
+                    },
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                      "module": "./src/client/client.ts",
+                      "moduleName": "./src/client/client.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "../shared/constants",
+                      "loc": "7:23-32"
+                    },
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                      "module": "./src/client/client.ts",
+                      "moduleName": "./src/client/client.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "../shared/constants",
+                      "loc": "19:25-34"
+                    }
+                  ],
+                  "usedExports": [
+                    "default"
+                  ],
+                  "providedExports": [
+                    "default"
+                  ],
+                  "optimizationBailout": [],
+                  "depth": 1,
+                  "source": "var Constants = /** @class */ (function () {\n    function Constants() {\n    }\n    Constants.PLAYER_SPEED = 5;\n    return Constants;\n}());\nexport default Constants;\n// if(typeof module !== 'undefined'){\n//     module.exports = Constants;\n// }\n"
+                }
+              ],
+              "filteredModules": 0
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "main",
+              "request": "./src/client/client.ts",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts eca2504d66d8debe27b2f463b65a8427",
+          "name": "./src/client/client.ts + 1 modules",
+          "index": 0,
+          "index2": 1,
+          "size": 1050,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src/client/client.ts",
+              "loc": "main"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "modules": [
+            {
+              "id": null,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+              "name": "./src/client/client.ts",
+              "index": 0,
+              "index2": 1,
+              "size": 808,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "./src/client/client.ts",
+                  "loc": "main"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": [],
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is an entry point"
+              ],
+              "depth": 0,
+              "source": "import Constants from '../shared/constants';\nvar Client = /** @class */ (function () {\n    function Client() {\n        this.inputs = { up: false, down: false, left: false, right: false, actionID: 0 };\n        this.socket = io();\n        this.socket.emit(Constants.SOCKET.JOIN);\n        this.socket.on(Constants.SOCKET.STATE, function (state) {\n            this.loadState(state);\n        });\n        var canvas = document.getElementById('canvas');\n        canvas.width = window.innerWidth;\n        canvas.height = window.innerHeight;\n        this.ctx = canvas.getContext('2d');\n        this.entities = [];\n    }\n    Client.prototype.loadState = function (state) {\n    };\n    Client.prototype.emit = function () {\n        this.socket.emit(Constants.SOCKET.INPUTS, this.inputs);\n    };\n    return Client;\n}());\n"
+            },
+            {
+              "id": null,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/shared/constants.ts",
+              "name": "./src/shared/constants.ts",
+              "index": 1,
+              "index2": 0,
+              "size": 242,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+              "issuerId": null,
+              "issuerName": "./src/client/client.ts",
+              "issuerPath": [
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "name": "./src/client/client.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "module": "./src/client/client.ts",
+                  "moduleName": "./src/client/client.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../shared/constants",
+                  "loc": "1:0-44"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "module": "./src/client/client.ts",
+                  "moduleName": "./src/client/client.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "6:25-34"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "module": "./src/client/client.ts",
+                  "moduleName": "./src/client/client.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "7:23-32"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/client/client.ts",
+                  "module": "./src/client/client.ts",
+                  "moduleName": "./src/client/client.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "19:25-34"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "var Constants = /** @class */ (function () {\n    function Constants() {\n    }\n    Constants.PLAYER_SPEED = 5;\n    return Constants;\n}());\nexport default Constants;\n// if(typeof module !== 'undefined'){\n//     module.exports = Constants;\n// }\n"
+            }
+          ],
+          "filteredModules": 0
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": []
+    },
+    {
+      "errors": [],
+      "warnings": [
+        "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+      ],
+      "hash": "e5129954ec0a449455ad",
+      "time": 2420,
+      "builtAt": 1590539226378,
+      "publicPath": "",
+      "outputPath": "/Users/aidanblumlevine/Desktop/NodeTS/dist",
+      "assetsByChunkName": {
+        "main": "server_bundle.js"
+      },
+      "assets": [
+        {
+          "name": "server_bundle.js",
+          "size": 4277,
+          "chunks": [
+            0
+          ],
+          "chunkNames": [
+            "main"
+          ],
+          "info": {},
+          "emitted": true
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "main": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "server_bundle.js"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "main": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "server_bundle.js"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 6430,
+          "names": [
+            "main"
+          ],
+          "files": [
+            "server_bundle.js"
+          ],
+          "hash": "56330f8228bc15cab26f",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": 0,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/shared/constants.ts",
+              "name": "./src/shared/constants.ts",
+              "index": 5,
+              "index2": 4,
+              "size": 242,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../shared/constants",
+                  "loc": "1:0-44"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../shared/constants",
+                  "loc": "14:0-44"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "35:29-38"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "62:39-48"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "62:84-93"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "63:39-48"
+                },
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+                  "module": "./src/server/game.ts + 2 modules",
+                  "moduleName": "./src/server/game.ts + 2 modules",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "63:81-90"
+                },
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../shared/constants",
+                  "loc": "8:0-44"
+                },
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "21:14-23"
+                },
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "../shared/constants",
+                  "loc": "22:14-23"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "var Constants = /** @class */ (function () {\n    function Constants() {\n    }\n    Constants.PLAYER_SPEED = 5;\n    return Constants;\n}());\nexport default Constants;\n// if(typeof module !== 'undefined'){\n//     module.exports = Constants;\n// }\n"
+            },
+            {
+              "id": 1,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "name": "./src/server/game.ts + 2 modules",
+              "index": 6,
+              "index2": 7,
+              "size": 5051,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./game",
+                  "loc": "9:0-31"
+                },
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "./game",
+                  "loc": "10:15-24"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Cannot concat with ./src/shared/constants.ts because of ./src/server/server.ts"
+              ],
+              "depth": 1,
+              "modules": [
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "name": "./src/server/game.ts",
+                  "index": 6,
+                  "index2": 7,
+                  "size": 1423,
+                  "cacheable": true,
+                  "built": true,
+                  "optional": false,
+                  "prefetched": false,
+                  "chunks": [],
+                  "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "issuerId": 2,
+                  "issuerName": "./src/server/server.ts",
+                  "issuerPath": [
+                    {
+                      "id": 2,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                      "name": "./src/server/server.ts"
+                    }
+                  ],
+                  "failed": false,
+                  "errors": 0,
+                  "warnings": 0,
+                  "assets": [],
+                  "reasons": [
+                    {
+                      "moduleId": 2,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                      "module": "./src/server/server.ts",
+                      "moduleName": "./src/server/server.ts",
+                      "type": "harmony side effect evaluation",
+                      "userRequest": "./game",
+                      "loc": "9:0-31"
+                    },
+                    {
+                      "moduleId": 2,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                      "module": "./src/server/server.ts",
+                      "moduleName": "./src/server/server.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "./game",
+                      "loc": "10:15-24"
+                    }
+                  ],
+                  "usedExports": [
+                    "default"
+                  ],
+                  "providedExports": [
+                    "default"
+                  ],
+                  "optimizationBailout": [],
+                  "depth": 1,
+                  "source": "import Constants from '../shared/constants';\nimport { Circle } from './shape';\nimport Player from './player';\nvar Game = /** @class */ (function () {\n    function Game(io) {\n        this.players = [];\n        setInterval(this.update.bind(this), 1000 / 60);\n        this.lastUpdate = Date.now();\n        this.io = io;\n    }\n    Game.prototype.join = function (socket) {\n        this.players.push(new Player(socket, new Circle(100, 100, 5, \"red\")));\n        this.fullUpdate(true);\n    };\n    Game.prototype.leave = function (socket) {\n        this.players = this.players.filter(function (p) { return (p.socket.id != socket.id); });\n        this.fullUpdate(true);\n    };\n    Game.prototype.input = function (socket, input) {\n        this.players.find(function (p) { return p.socket.id == socket.id; }).addInput(input);\n    };\n    Game.prototype.update = function () {\n        var now = Date.now();\n        var deltaTime = (now - this.lastUpdate) / 1000;\n        this.lastUpdate = now;\n        if (Math.random() < .1) {\n            this.fullUpdate(false);\n        }\n    };\n    Game.prototype.fullUpdate = function (initial) {\n        this.players.forEach(function (player) {\n            player.update(true);\n        });\n        var state = this.players.map(function (player) { return player.serialize(initial); });\n        this.io.sockets.emit(Constants.SOCKET.STATE, state);\n    };\n    return Game;\n}());\nexport default Game;\n"
+                },
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/shape.ts",
+                  "name": "./src/server/shape.ts",
+                  "index": 7,
+                  "index2": 5,
+                  "size": 1104,
+                  "cacheable": true,
+                  "built": true,
+                  "optional": false,
+                  "prefetched": false,
+                  "chunks": [],
+                  "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "issuerId": null,
+                  "issuerName": "./src/server/game.ts",
+                  "issuerPath": [
+                    {
+                      "id": 2,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                      "name": "./src/server/server.ts"
+                    },
+                    {
+                      "id": null,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "name": "./src/server/game.ts"
+                    }
+                  ],
+                  "failed": false,
+                  "errors": 0,
+                  "warnings": 0,
+                  "assets": [],
+                  "reasons": [
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "module": "./src/server/game.ts",
+                      "moduleName": "./src/server/game.ts",
+                      "type": "harmony side effect evaluation",
+                      "userRequest": "./shape",
+                      "loc": "2:0-33"
+                    },
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "module": "./src/server/game.ts",
+                      "moduleName": "./src/server/game.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "./shape",
+                      "loc": "12:49-55"
+                    }
+                  ],
+                  "usedExports": [
+                    "Circle"
+                  ],
+                  "providedExports": [
+                    "Box",
+                    "Circle"
+                  ],
+                  "optimizationBailout": [],
+                  "depth": 2,
+                  "source": "var Box = /** @class */ (function () {\n    function Box(x, y, width, height, color) {\n        this.x = x;\n        this.y = y;\n        this.width = width;\n        this.height = height;\n        if (color === undefined) {\n            this.color = 'black';\n        }\n        else {\n            this.color = color;\n        }\n    }\n    Box.prototype.bounds = function () {\n        return {\n            x: this.x,\n            y: this.y,\n            width: this.width,\n            height: this.height\n        };\n    };\n    return Box;\n}());\nvar Circle = /** @class */ (function () {\n    function Circle(x, y, radius, color) {\n        this.x = x;\n        this.y = y;\n        this.radius = radius;\n        if (color === undefined) {\n            this.color = 'black';\n        }\n        else {\n            this.color = color;\n        }\n    }\n    Circle.prototype.bounds = function () {\n        return {\n            x: this.x - this.radius,\n            y: this.x - this.radius,\n            width: this.radius * 2,\n            height: this.radius * 2\n        };\n    };\n    return Circle;\n}());\nexport { Box, Circle };\n"
+                },
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/player.ts",
+                  "name": "./src/server/player.ts",
+                  "index": 8,
+                  "index2": 6,
+                  "size": 2519,
+                  "cacheable": true,
+                  "built": true,
+                  "optional": false,
+                  "prefetched": false,
+                  "chunks": [],
+                  "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "issuerId": null,
+                  "issuerName": "./src/server/game.ts",
+                  "issuerPath": [
+                    {
+                      "id": 2,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                      "name": "./src/server/server.ts"
+                    },
+                    {
+                      "id": null,
+                      "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "name": "./src/server/game.ts"
+                    }
+                  ],
+                  "failed": false,
+                  "errors": 0,
+                  "warnings": 0,
+                  "assets": [],
+                  "reasons": [
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "module": "./src/server/game.ts",
+                      "moduleName": "./src/server/game.ts",
+                      "type": "harmony side effect evaluation",
+                      "userRequest": "./player",
+                      "loc": "3:0-30"
+                    },
+                    {
+                      "moduleId": null,
+                      "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                      "module": "./src/server/game.ts",
+                      "moduleName": "./src/server/game.ts",
+                      "type": "harmony import specifier",
+                      "userRequest": "./player",
+                      "loc": "12:30-36"
+                    }
+                  ],
+                  "usedExports": [
+                    "default"
+                  ],
+                  "providedExports": [
+                    "Entity",
+                    "default"
+                  ],
+                  "optimizationBailout": [],
+                  "depth": 2,
+                  "source": "var __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nimport Constants from '../shared/constants';\nvar Entity = /** @class */ (function () {\n    function Entity(shape) {\n        this.shape = shape;\n        this.id = Entity.nextID;\n        Entity.nextID++;\n    }\n    Entity.prototype.serialize = function (full) {\n        if (full) {\n            return Object.assign({}, this.shape, { id: this.id });\n        }\n        else {\n            return { x: this.shape.x, y: this.shape.y, id: this.id };\n        }\n    };\n    Entity.nextID = 0;\n    return Entity;\n}());\nvar Player = /** @class */ (function (_super) {\n    __extends(Player, _super);\n    function Player(socket, shape) {\n        var _this = _super.call(this, shape) || this;\n        _this.socket = socket;\n        _this.unprocessedInputs = [];\n        return _this;\n    }\n    Player.prototype.serialize = function (full) {\n        if (full) {\n            return Object.assign({}, this.shape, { id: this.id });\n        }\n        else {\n            return { x: this.shape.x, y: this.shape.y, lastProcessedInput: this.lastProcessedInput, id: this.id };\n        }\n    };\n    Player.prototype.addInput = function (input) {\n        this.unprocessedInputs.push(input);\n        this.lastProcessedInput = input.actionID;\n    };\n    Player.prototype.update = function (processInputs) {\n        var _this = this;\n        if (processInputs) {\n            if (this.unprocessedInputs.length > 0) {\n                this.unprocessedInputs.forEach(function (input) { return _this.processInput(input); });\n                this.unprocessedInputs = [];\n            }\n        }\n    };\n    Player.prototype.processInput = function (input) {\n        this.shape.x += (input.left ? -Constants.PLAYER_SPEED : 0) + (input.right ? Constants.PLAYER_SPEED : 0);\n        this.shape.y += (input.down ? -Constants.PLAYER_SPEED : 0) + (input.up ? Constants.PLAYER_SPEED : 0);\n    };\n    return Player;\n}(Entity));\nexport { Entity as Entity };\nexport default Player;\n"
+                }
+              ],
+              "filteredModules": 0
+            },
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts",
+              "index": 0,
+              "index2": 8,
+              "size": 969,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "./src/server/server.ts",
+                  "loc": "main"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": [],
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module uses injected variables (__dirname)"
+              ],
+              "depth": 0,
+              "source": "var express = require('express');\nvar http = require('http');\nvar path = require('path');\nvar socketIO = require('socket.io');\nvar app = express();\nvar server = http.Server(app);\nvar io = socketIO(server);\nimport Constants from '../shared/constants';\nimport GameClass from './game';\nvar Game = new GameClass(io);\napp.set('port', 5000);\napp.use('/', express.static(path.join(__dirname, '/../../dist')));\napp.use('/shared', express.static(path.join(__dirname, '/../shared')));\napp.get(\"/\", function (req, res) {\n    res.sendFile(path.join(__dirname, '../client/html/index.html'));\n});\nserver.listen(5000, function () {\n    console.log(\"Server is running in http://localhost:5000\");\n});\nio.on('connection', function (socket) {\n    socket.on(Constants.SOCKET.JOIN, function () { Game.join(socket); });\n    socket.on(Constants.SOCKET.INPUTS, function (input) {\n        Game.input(socket, input);\n    });\n    socket.on('disconnect', function () { Game.leave(socket); });\n});\n"
+            },
+            {
+              "id": 3,
+              "identifier": "external \"express\"",
+              "name": "external \"express\"",
+              "index": 1,
+              "index2": 0,
+              "size": 42,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "cjs require",
+                  "userRequest": "express",
+                  "loc": "1:14-32"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 1
+            },
+            {
+              "id": 4,
+              "identifier": "external \"http\"",
+              "name": "external \"http\"",
+              "index": 2,
+              "index2": 1,
+              "size": 42,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "cjs require",
+                  "userRequest": "http",
+                  "loc": "2:11-26"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 1
+            },
+            {
+              "id": 5,
+              "identifier": "external \"path\"",
+              "name": "external \"path\"",
+              "index": 3,
+              "index2": 2,
+              "size": 42,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "cjs require",
+                  "userRequest": "path",
+                  "loc": "3:11-26"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 1
+            },
+            {
+              "id": 6,
+              "identifier": "external \"socket.io\"",
+              "name": "external \"socket.io\"",
+              "index": 4,
+              "index2": 3,
+              "size": 42,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "cjs require",
+                  "userRequest": "socket.io",
+                  "loc": "4:15-35"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 1
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "main",
+              "request": "./src/server/server.ts",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/shared/constants.ts",
+          "name": "./src/shared/constants.ts",
+          "index": 5,
+          "index2": 4,
+          "size": 242,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "issuerId": 2,
+          "issuerName": "./src/server/server.ts",
+          "issuerPath": [
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../shared/constants",
+              "loc": "1:0-44"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../shared/constants",
+              "loc": "14:0-44"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "35:29-38"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "62:39-48"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "62:84-93"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "63:39-48"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+              "module": "./src/server/game.ts + 2 modules",
+              "moduleName": "./src/server/game.ts + 2 modules",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "63:81-90"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../shared/constants",
+              "loc": "8:0-44"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "21:14-23"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "harmony import specifier",
+              "userRequest": "../shared/constants",
+              "loc": "22:14-23"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "var Constants = /** @class */ (function () {\n    function Constants() {\n    }\n    Constants.PLAYER_SPEED = 5;\n    return Constants;\n}());\nexport default Constants;\n// if(typeof module !== 'undefined'){\n//     module.exports = Constants;\n// }\n"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts 9d77b566bd0d72cbc4c84bfb81b57488",
+          "name": "./src/server/game.ts + 2 modules",
+          "index": 6,
+          "index2": 7,
+          "size": 5051,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./game",
+              "loc": "9:0-31"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "harmony import specifier",
+              "userRequest": "./game",
+              "loc": "10:15-24"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Cannot concat with ./src/shared/constants.ts because of ./src/server/server.ts"
+          ],
+          "depth": 1,
+          "modules": [
+            {
+              "id": null,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+              "name": "./src/server/game.ts",
+              "index": 6,
+              "index2": 7,
+              "size": 1423,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "issuerId": 2,
+              "issuerName": "./src/server/server.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./game",
+                  "loc": "9:0-31"
+                },
+                {
+                  "moduleId": 2,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "module": "./src/server/server.ts",
+                  "moduleName": "./src/server/server.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "./game",
+                  "loc": "10:15-24"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "import Constants from '../shared/constants';\nimport { Circle } from './shape';\nimport Player from './player';\nvar Game = /** @class */ (function () {\n    function Game(io) {\n        this.players = [];\n        setInterval(this.update.bind(this), 1000 / 60);\n        this.lastUpdate = Date.now();\n        this.io = io;\n    }\n    Game.prototype.join = function (socket) {\n        this.players.push(new Player(socket, new Circle(100, 100, 5, \"red\")));\n        this.fullUpdate(true);\n    };\n    Game.prototype.leave = function (socket) {\n        this.players = this.players.filter(function (p) { return (p.socket.id != socket.id); });\n        this.fullUpdate(true);\n    };\n    Game.prototype.input = function (socket, input) {\n        this.players.find(function (p) { return p.socket.id == socket.id; }).addInput(input);\n    };\n    Game.prototype.update = function () {\n        var now = Date.now();\n        var deltaTime = (now - this.lastUpdate) / 1000;\n        this.lastUpdate = now;\n        if (Math.random() < .1) {\n            this.fullUpdate(false);\n        }\n    };\n    Game.prototype.fullUpdate = function (initial) {\n        this.players.forEach(function (player) {\n            player.update(true);\n        });\n        var state = this.players.map(function (player) { return player.serialize(initial); });\n        this.io.sockets.emit(Constants.SOCKET.STATE, state);\n    };\n    return Game;\n}());\nexport default Game;\n"
+            },
+            {
+              "id": null,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/shape.ts",
+              "name": "./src/server/shape.ts",
+              "index": 7,
+              "index2": 5,
+              "size": 1104,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+              "issuerId": null,
+              "issuerName": "./src/server/game.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                },
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "name": "./src/server/game.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "module": "./src/server/game.ts",
+                  "moduleName": "./src/server/game.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./shape",
+                  "loc": "2:0-33"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "module": "./src/server/game.ts",
+                  "moduleName": "./src/server/game.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "./shape",
+                  "loc": "12:49-55"
+                }
+              ],
+              "usedExports": [
+                "Circle"
+              ],
+              "providedExports": [
+                "Box",
+                "Circle"
+              ],
+              "optimizationBailout": [],
+              "depth": 2,
+              "source": "var Box = /** @class */ (function () {\n    function Box(x, y, width, height, color) {\n        this.x = x;\n        this.y = y;\n        this.width = width;\n        this.height = height;\n        if (color === undefined) {\n            this.color = 'black';\n        }\n        else {\n            this.color = color;\n        }\n    }\n    Box.prototype.bounds = function () {\n        return {\n            x: this.x,\n            y: this.y,\n            width: this.width,\n            height: this.height\n        };\n    };\n    return Box;\n}());\nvar Circle = /** @class */ (function () {\n    function Circle(x, y, radius, color) {\n        this.x = x;\n        this.y = y;\n        this.radius = radius;\n        if (color === undefined) {\n            this.color = 'black';\n        }\n        else {\n            this.color = color;\n        }\n    }\n    Circle.prototype.bounds = function () {\n        return {\n            x: this.x - this.radius,\n            y: this.x - this.radius,\n            width: this.radius * 2,\n            height: this.radius * 2\n        };\n    };\n    return Circle;\n}());\nexport { Box, Circle };\n"
+            },
+            {
+              "id": null,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/player.ts",
+              "name": "./src/server/player.ts",
+              "index": 8,
+              "index2": 6,
+              "size": 2519,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [],
+              "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+              "issuerId": null,
+              "issuerName": "./src/server/game.ts",
+              "issuerPath": [
+                {
+                  "id": 2,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+                  "name": "./src/server/server.ts"
+                },
+                {
+                  "id": null,
+                  "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "name": "./src/server/game.ts"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "module": "./src/server/game.ts",
+                  "moduleName": "./src/server/game.ts",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "./player",
+                  "loc": "3:0-30"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/game.ts",
+                  "module": "./src/server/game.ts",
+                  "moduleName": "./src/server/game.ts",
+                  "type": "harmony import specifier",
+                  "userRequest": "./player",
+                  "loc": "12:30-36"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "Entity",
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 2,
+              "source": "var __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nimport Constants from '../shared/constants';\nvar Entity = /** @class */ (function () {\n    function Entity(shape) {\n        this.shape = shape;\n        this.id = Entity.nextID;\n        Entity.nextID++;\n    }\n    Entity.prototype.serialize = function (full) {\n        if (full) {\n            return Object.assign({}, this.shape, { id: this.id });\n        }\n        else {\n            return { x: this.shape.x, y: this.shape.y, id: this.id };\n        }\n    };\n    Entity.nextID = 0;\n    return Entity;\n}());\nvar Player = /** @class */ (function (_super) {\n    __extends(Player, _super);\n    function Player(socket, shape) {\n        var _this = _super.call(this, shape) || this;\n        _this.socket = socket;\n        _this.unprocessedInputs = [];\n        return _this;\n    }\n    Player.prototype.serialize = function (full) {\n        if (full) {\n            return Object.assign({}, this.shape, { id: this.id });\n        }\n        else {\n            return { x: this.shape.x, y: this.shape.y, lastProcessedInput: this.lastProcessedInput, id: this.id };\n        }\n    };\n    Player.prototype.addInput = function (input) {\n        this.unprocessedInputs.push(input);\n        this.lastProcessedInput = input.actionID;\n    };\n    Player.prototype.update = function (processInputs) {\n        var _this = this;\n        if (processInputs) {\n            if (this.unprocessedInputs.length > 0) {\n                this.unprocessedInputs.forEach(function (input) { return _this.processInput(input); });\n                this.unprocessedInputs = [];\n            }\n        }\n    };\n    Player.prototype.processInput = function (input) {\n        this.shape.x += (input.left ? -Constants.PLAYER_SPEED : 0) + (input.right ? Constants.PLAYER_SPEED : 0);\n        this.shape.y += (input.down ? -Constants.PLAYER_SPEED : 0) + (input.up ? Constants.PLAYER_SPEED : 0);\n    };\n    return Player;\n}(Entity));\nexport { Entity as Entity };\nexport default Player;\n"
+            }
+          ],
+          "filteredModules": 0
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "name": "./src/server/server.ts",
+          "index": 0,
+          "index2": 8,
+          "size": 969,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src/server/server.ts",
+              "loc": "main"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module uses injected variables (__dirname)"
+          ],
+          "depth": 0,
+          "source": "var express = require('express');\nvar http = require('http');\nvar path = require('path');\nvar socketIO = require('socket.io');\nvar app = express();\nvar server = http.Server(app);\nvar io = socketIO(server);\nimport Constants from '../shared/constants';\nimport GameClass from './game';\nvar Game = new GameClass(io);\napp.set('port', 5000);\napp.use('/', express.static(path.join(__dirname, '/../../dist')));\napp.use('/shared', express.static(path.join(__dirname, '/../shared')));\napp.get(\"/\", function (req, res) {\n    res.sendFile(path.join(__dirname, '../client/html/index.html'));\n});\nserver.listen(5000, function () {\n    console.log(\"Server is running in http://localhost:5000\");\n});\nio.on('connection', function (socket) {\n    socket.on(Constants.SOCKET.JOIN, function () { Game.join(socket); });\n    socket.on(Constants.SOCKET.INPUTS, function (input) {\n        Game.input(socket, input);\n    });\n    socket.on('disconnect', function () { Game.leave(socket); });\n});\n"
+        },
+        {
+          "id": 3,
+          "identifier": "external \"express\"",
+          "name": "external \"express\"",
+          "index": 1,
+          "index2": 0,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "issuerId": 2,
+          "issuerName": "./src/server/server.ts",
+          "issuerPath": [
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "cjs require",
+              "userRequest": "express",
+              "loc": "1:14-32"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        },
+        {
+          "id": 4,
+          "identifier": "external \"http\"",
+          "name": "external \"http\"",
+          "index": 2,
+          "index2": 1,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "issuerId": 2,
+          "issuerName": "./src/server/server.ts",
+          "issuerPath": [
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "cjs require",
+              "userRequest": "http",
+              "loc": "2:11-26"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        },
+        {
+          "id": 5,
+          "identifier": "external \"path\"",
+          "name": "external \"path\"",
+          "index": 3,
+          "index2": 2,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "issuerId": 2,
+          "issuerName": "./src/server/server.ts",
+          "issuerPath": [
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "cjs require",
+              "userRequest": "path",
+              "loc": "3:11-26"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        },
+        {
+          "id": 6,
+          "identifier": "external \"socket.io\"",
+          "name": "external \"socket.io\"",
+          "index": 4,
+          "index2": 3,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+          "issuerId": 2,
+          "issuerName": "./src/server/server.ts",
+          "issuerPath": [
+            {
+              "id": 2,
+              "identifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "name": "./src/server/server.ts"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/aidanblumlevine/Desktop/NodeTS/node_modules/ts-loader/index.js!/Users/aidanblumlevine/Desktop/NodeTS/src/server/server.ts",
+              "module": "./src/server/server.ts",
+              "moduleName": "./src/server/server.ts",
+              "type": "cjs require",
+              "userRequest": "socket.io",
+              "loc": "4:15-35"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": []
+    }
+  ]
+}
