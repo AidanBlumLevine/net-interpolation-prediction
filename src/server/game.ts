@@ -46,13 +46,15 @@ export default class Game {
     processInputs() {
         this.inputs.sort((a, b) => a.serverTime - b.serverTime);
         for (var input of this.inputs) {
-            input.player.apply(input);
+            if (input.player !== undefined) {
+                input.player.apply(input);
+            }
         }
         this.inputs = [];
         for (var player of this.players) {
             player.updateClient(this.players); //.filter(p => p !== player)
         }
-        for(var player of this.players){
+        for (var player of this.players) {
             player.path = [];
         }
     };

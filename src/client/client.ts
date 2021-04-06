@@ -82,7 +82,6 @@ class Client {
         var activePlayerIDs = data.otherPlayers.map(s => s.id);
         activePlayerIDs.push(this.localPlayer.id);
         this.players = this.players.filter(p => activePlayerIDs.indexOf(p.id) !== -1);
-        console.log(data.otherPlayers);
         for (var obj of data.otherPlayers) {
             var existingPlayer = this.players.find(e => e.id === obj.id) as PredictivePlayer;
             if (existingPlayer === undefined) { //new player
@@ -95,9 +94,13 @@ class Client {
     }
 
     draw() {
-        this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        //this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        this.ctx.fillStyle = "white";
+        this.ctx.globalAlpha = .1;
+        this.ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+        this.ctx.globalAlpha = 1;
         this.map.map.forEach(shape => shape.draw(this.ctx));
-        this.players.forEach(player => player.shape.draw(this.ctx));
+        this.players.forEach(player => player.draw(this.ctx));
     }
 
     updateKeyStates(code, value) {

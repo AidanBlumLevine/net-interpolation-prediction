@@ -31,4 +31,8 @@ export default class Player extends Entity {
         this.shape.vel.set(this.shape.vel.mult(1 - Constants.FRICTION * deltaTime));
         this.map.collide(this);
     }
+
+    draw(ctx: CanvasRenderingContext2D){
+        this.shape.draw(ctx);
+    }
 }
