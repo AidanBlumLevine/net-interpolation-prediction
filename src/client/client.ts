@@ -17,6 +17,7 @@ class Client {
     constructor() {
         this.input = { up: false, down: false, left: false, right: false, clientTime: 0, deltaTime: 0 }
         this.socket = io();
+        this.socket.io.reconnection(false);
         this.socket.emit(Constants.SOCKET.JOIN);
 
         this.inputs = [];
@@ -96,7 +97,7 @@ class Client {
     draw() {
         //this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         this.ctx.fillStyle = "white";
-        this.ctx.globalAlpha = .1;
+        this.ctx.globalAlpha = 1;
         this.ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
         this.ctx.globalAlpha = 1;
         this.map.map.forEach(shape => shape.draw(this.ctx));

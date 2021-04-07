@@ -1,4 +1,3 @@
-import { exception } from "console";
 import Constants from "./constants";
 import Map from "./map";
 import { Circle } from "./shape";

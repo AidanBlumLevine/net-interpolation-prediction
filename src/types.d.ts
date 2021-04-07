@@ -34,7 +34,6 @@ interface SerializedPlayer {
     lastProcessedTime?: number,
     pos: import("./shared/vector").default,
     vel: import("./shared/vector").default,
-    path?: State[]
 }
 
 type InitialPacket = {
@@ -50,7 +49,8 @@ type UpdatePacket = {
 type State = {
     pos: import("./shared/vector").default,
     vel: import("./shared/vector").default,
-    deltaTime: number,
+    deltaTime?: number,
+    clientTime?: number,
 }
 
 interface Contact {

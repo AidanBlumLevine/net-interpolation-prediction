@@ -54,8 +54,5 @@ export default class Game {
         for (var player of this.players) {
             player.updateClient(this.players); //.filter(p => p !== player)
         }
-        for (var player of this.players) {
-            player.path = [];
-        }
     };
 }
